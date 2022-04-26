@@ -3,6 +3,17 @@
 #osztályok
 
 #függvények
+def betoltes():
+    f = open("mese01.txt","r", encoding="utf8")
+
+    while True:
+        sor = f.readline()
+        if sor == "":
+            break
+        else:
+            mese01.append(Bolygo(sor))
+    f.close()
+
 
 def maganhangzok_szama(szo) :
     mh = "aáeéiíoóuúüű"
@@ -47,7 +58,7 @@ def statisztika_megjelenitese(stat):
 
 
 #programtörzs
-nev = input("Név: ")
+
 
 print(f"A név hossza : {len(nev)} karakter.")
 print(f"A Mássalhangzók száma: {massalhangzok_szama(nev)}db.")
